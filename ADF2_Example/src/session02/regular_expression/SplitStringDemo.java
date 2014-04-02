@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package session02_regular_expression;
+package session02.regular_expression;
 
 /**
  *

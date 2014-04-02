@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session02_regular_expression;
+package session02.regular_expression;
 
 import java.util.Scanner;
 import java.util.regex.Matcher;
