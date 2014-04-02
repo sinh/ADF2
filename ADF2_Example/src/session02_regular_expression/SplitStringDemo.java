@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session01.assertion;
+
+package session02_regular_expression;
 
 /**
  *
  * @author sinhnx
  */
-public class AssertionDemo {
-
+public class SplitStringDemo {
     public static void main(String[] args) {
-        int a = 16;
-        assert a > 18 : "So phai lon hon 18";
-        System.out.println(a);
+        String str = "Hello;123;World";
+        String [] a = str.split(";");
+        for (String s : a) {
+            System.out.println(s);
+        }
     }
 }

@@ -25,7 +25,9 @@ public class CheckedExceptionHandling {
             Logger.getLogger(CheckedExceptionHandling.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
             try {
-                fos.close();
+                if (fos != null) {
+                    fos.close();
+                }
             } catch (IOException ex) {
                 Logger.getLogger(CheckedExceptionHandling.class.getName()).log(Level.SEVERE, null, ex);
             }
