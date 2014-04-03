@@ -8,6 +8,7 @@ package session03.collection.list_interface;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  *
@@ -15,10 +16,10 @@ import java.util.Iterator;
  */
 public class ArrayListDemo {
     public static void main(String[] args) {
-        ArrayList arrayList = new ArrayList();
+        List arrayList = new ArrayList();
         arrayList.add(1);
         arrayList.add(5);
-        arrayList.add("Hello");
+        arrayList.add(0, "Hello");
         arrayList.add(12.7);
         arrayList.add("World");
         
