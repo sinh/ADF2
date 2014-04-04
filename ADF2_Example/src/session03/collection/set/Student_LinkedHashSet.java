@@ -4,33 +4,28 @@
  * and open the template in the editor.
  */
 
-package session03.collection.list_interface;
+package session03.collection.set;
 
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import session03.collection.Student;
 
 /**
  *
  * @author sinhnx
  */
-public class Student_ArrayList {
+public class Student_LinkedHashSet {
     public static void main(String[] args) {
         Student s1 = new Student("A12345", "Nguyen Van A");
         Student s2 = new Student("A12345", "Nguyen Van B");
         Student s3 = new Student("A12346", "Nguyen Van C");
         
-        ArrayList list = new ArrayList();
-        list.add(s1);
-        list.add(s2);
-        list.add(s3);
+        LinkedHashSet lhs = new LinkedHashSet();
+        lhs.add(s1);
+        lhs.add(s2);
+        lhs.add(s3);
         
-        for (Object obj : list) {
+        for (Object obj : lhs) {
             System.out.println(obj);
-        }
-        
-        list.remove(new Student("A12346", "123"));
-        System.out.println("\nAfter remove:");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
         }
     }
 }

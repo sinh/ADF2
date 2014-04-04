@@ -15,6 +15,7 @@ import java.util.logging.Logger;
  */
 public class RuntimeDemo {
 
+    /* Chương trình mở Calculator của Hệ điều hành */
     public static void main(String[] args) {
         try {
             /* Chạy trên Windows */

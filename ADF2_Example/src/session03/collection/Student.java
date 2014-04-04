@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session03.collection.list_interface;
+package session03.collection;
 
 import java.util.Objects;
 
@@ -11,7 +11,7 @@ import java.util.Objects;
  *
  * @author sinhnx
  */
-public class Student {
+public class Student implements Comparable {
 
     private String rollNo;
     private String name;
@@ -62,5 +62,14 @@ public class Student {
     @Override
     public String toString() {
         return "Student{" + "rollNo=" + rollNo + ", name=" + name + '}';
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if(o instanceof Student){
+            Student s = (Student)o;
+            return this.rollNo.compareTo(s.rollNo);
+        }
+        return 0;
     }
 }

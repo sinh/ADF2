@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package session03.collection.list_interface;
+package session03.collection.list;
 
 import java.util.ArrayList;
 import java.util.Iterator;
