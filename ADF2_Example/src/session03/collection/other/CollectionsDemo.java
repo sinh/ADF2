@@ -18,7 +18,7 @@ import session03.collection.Student;
 public class CollectionsDemo {
 
     public static void main(String[] args) {
-        List lst = new ArrayList();
+        List<Student> lst = new ArrayList();
         //Thêm sinh viên vào danh sách
         lst.add(new Student("A33333", "Nguyen Van Z"));
         lst.add(new Student("A11111", "Nguyen Van E"));
@@ -26,6 +26,7 @@ public class CollectionsDemo {
         lst.add(new Student("A22222", "Nguyen Van B"));
         lst.add(new Student("A44444", "Nguyen Van A"));
         lst.add(new Student("A66666", "Nguyen Van F"));
+        //lst.add("Hello");
 
         //Sắp xếp theo rollNo vì lớp Student đã implements Comparable interface
         Collections.sort(lst);
