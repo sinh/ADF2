@@ -7,7 +7,7 @@ package session01.exception_handling;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class UncheckedExceptionHandling {
 

@@ -11,7 +11,7 @@ import java.util.Iterator;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class VectorDemo {
     public static void main(String[] args) {

@@ -11,7 +11,7 @@ import java.util.TreeMap;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class Dictionary_TreeMap {
     public static void main(String[] args) {

@@ -6,7 +6,7 @@ package session04.generic;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class GenericMethod {
 

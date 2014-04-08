@@ -6,7 +6,7 @@ package session04.generic;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class WildcardsWithGeneric {
     // determines the largest of three Comparable objects

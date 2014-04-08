@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class ClassDemo {
 

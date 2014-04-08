@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class RuntimeDemo {
 

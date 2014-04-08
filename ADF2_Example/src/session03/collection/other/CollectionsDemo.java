@@ -13,7 +13,7 @@ import session03.collection.Student;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class CollectionsDemo {
 

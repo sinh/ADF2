@@ -7,7 +7,7 @@ package session01.assertion;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class AssertionDemo {
 

@@ -9,7 +9,7 @@ import java.util.Objects;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class Student implements Comparable {
 

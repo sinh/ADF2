@@ -8,7 +8,7 @@ package session02.regular_expression;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class SplitStringDemo {
     public static void main(String[] args) {

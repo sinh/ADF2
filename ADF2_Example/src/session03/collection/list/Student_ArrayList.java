@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class Student_ArrayList {
     public static void main(String[] args) {

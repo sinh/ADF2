@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class Dictionary_HashMap {
     public static void main(String[] args) {

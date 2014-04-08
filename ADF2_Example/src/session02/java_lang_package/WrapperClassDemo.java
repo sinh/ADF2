@@ -8,7 +8,7 @@ package session02.java_lang_package;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class WrapperClassDemo {
     public static void main(String[] args) {

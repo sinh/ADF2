@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author sinhnx
+ * @author SinhNX <sinhnx@fpt.edu.vn>
  */
 public class RollNoAccept {
 
