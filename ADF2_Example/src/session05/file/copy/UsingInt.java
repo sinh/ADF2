@@ -10,6 +10,8 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,40 +19,24 @@ import java.util.Date;
  */
 public class UsingInt {
 
-    public static final String SOURCE_FILE = "";
-    public static final String DESTINATION_FILE = "";
+    public static final String SOURCE_FILE = "src/session05/file/copy/io.png";
+    public static final String DESTINATION_FILE = "src/session05/file/copy/io_copy.png";
 
     public static void main(String[] args) {
-        long time1 = new Date().getTime();
-        FileInputStream fis = null;
-        FileOutputStream fos = null;
-        try {
-            //lay file (ca duong dan) can copy
-            fis = new FileInputStream(SOURCE_FILE);
-
-            //Tao ra file dich de copy
-            fos = new FileOutputStream(DESTINATION_FILE);
-
-            int data;
-            while ((data = fis.read()) != -1) {
-                fos.write(data);
+        long start = new Date().getTime();
+        try (FileInputStream fis = new FileInputStream(SOURCE_FILE);
+                FileOutputStream fos = new FileOutputStream(DESTINATION_FILE);) {
+            int i;
+            while ((i = fis.read()) != -1) {
+                fos.write(i);
             }
+            System.out.println("Copy file thành công!");
         } catch (FileNotFoundException ex) {
-            System.out.println("Source File not exists!");
+            Logger.getLogger(UsingInt.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
-        } finally {
-            try {
-                //Đóng 2 đối tượng file
-                if (fis != null) {
-                    fis.close();
-                }
-                if (fos != null) {
-                    fos.close();
-                }
-            } catch (IOException ex) {
-            }
+            Logger.getLogger(UsingInt.class.getName()).log(Level.SEVERE, null, ex);
         }
-        long time2 = new Date().getTime();
-        System.out.println("Copy time: " + (time2 - time1));
+        long stop = new Date().getTime();
+        System.out.println("Thời gian copy: " + (stop - start) + "ms");
     }
 }

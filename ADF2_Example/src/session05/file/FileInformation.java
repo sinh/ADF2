@@ -24,7 +24,7 @@ public class FileInformation {
             System.out.println("Có khả năng đọc: " + f.canRead());
             System.out.println("Có khả năng thay đổi: " + f.canWrite());
         }else{
-            System.out.println("File " + f.getAbsolutePath() + " không tồn tại.");
+            System.out.println("File không tồn tại.");
         }
     }
 }

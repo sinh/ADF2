@@ -5,13 +5,14 @@
  */
 package session03.collection;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /**
  *
  * @author SinhNX <sinhnx@fpt.edu.vn>
  */
-public class Student implements Comparable {
+public class Student implements Comparable, Serializable{
 
     private String rollNo;
     private String name;
