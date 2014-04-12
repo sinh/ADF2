@@ -44,21 +44,17 @@ public class ZipCompresser {
     public static boolean compress(String[] fileList, String zipFile) {
         byte buf[] = new byte[2048];
         int len;
-        try {
-            ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(zipFile));
-
+        try (ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(zipFile));) {
             for (String fileName : fileList) {
-                FileInputStream fis = new FileInputStream(fileName);
-                zos.putNextEntry(new ZipEntry(fileName));
+                try (FileInputStream fis = new FileInputStream(fileName)) {
+                    zos.putNextEntry(new ZipEntry(fileName));
 
-                while ((len = fis.read(buf)) > 0) {
-                    zos.write(buf, 0, len);
+                    while ((len = fis.read(buf)) > 0) {
+                        zos.write(buf, 0, len);
+                    }
+                    zos.closeEntry();
                 }
-                zos.closeEntry();
-                fis.close();
-
             }
-            zos.close();
         } catch (FileNotFoundException ex) {
             return false;
         } catch (IOException ex) {
@@ -76,24 +72,16 @@ public class ZipCompresser {
             while (enumeration.hasMoreElements()) {
                 ZipEntry zipEntry = (ZipEntry) enumeration.nextElement();
                 System.out.println("Unzipping: " + zipEntry.getName());
-
-                BufferedInputStream bis = new BufferedInputStream(zipFile.getInputStream(zipEntry));
-
-                int size;
-                byte[] buffer = new byte[2048];
-
-                FileOutputStream fos = new FileOutputStream(pathUnzip + "/" + zipEntry.getName());
-                BufferedOutputStream bos = new BufferedOutputStream(fos, buffer.length);
-
-                while ((size = bis.read(buffer, 0, buffer.length)) != -1) {
-                    bos.write(buffer, 0, size);
+                try (BufferedInputStream bis = new BufferedInputStream(zipFile.getInputStream(zipEntry))) {
+                    int size;
+                    byte[] buffer = new byte[2048];
+                    try (FileOutputStream fos = new FileOutputStream(pathUnzip + "/" + zipEntry.getName()); BufferedOutputStream bos = new BufferedOutputStream(fos, buffer.length)) {
+                        while ((size = bis.read(buffer, 0, buffer.length)) != -1) {
+                            bos.write(buffer, 0, size);
+                        }
+                        bos.flush();
+                    }
                 }
-
-                bos.flush();
-                bos.close();
-                fos.close();
-
-                bis.close();
             }
         } catch (ZipException ze) {
             System.out.println("File [" + zipFileName + "] not exists.");
