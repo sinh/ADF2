@@ -19,10 +19,10 @@ public class RuntimeDemo {
     public static void main(String[] args) {
         try {
             /* Chạy trên Windows */
-            Runtime.getRuntime().exec("cal");
+            //Runtime.getRuntime().exec("cal");
             
             /* Chạy trên MacOSX */
-            //Runtime.getRuntime().exec("open -a Calculator");
+            Runtime.getRuntime().exec("open -a Calculator");
         } catch (IOException ex) {
             Logger.getLogger(RuntimeDemo.class.getName()).log(Level.SEVERE, null, ex);
         }

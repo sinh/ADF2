@@ -20,7 +20,7 @@ import session03.collection.Student;
 public class Student_ObjectOutputStream {
 
     public static void main(String[] args) {
-        Student s = new Student("A12345", "Nguyen Van A");
+        Student s = new Student("A12345", "Nguyen Van B");
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("Student.dat"));){
             oos.writeObject(s);
         } catch (FileNotFoundException ex) {
