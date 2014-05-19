@@ -14,20 +14,11 @@ import java.util.logging.Logger;
  */
 public class JDBC_ODBC_Bridge {
     public static void main(String[] args) {
-        String sql = "SELECT ClassName, Location FROM Classes ORDER BY Location";
         try {
             Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
-            
-            //Phai thiet lap mot ODBC ten la type1 trong DataSource (ODBC)
-            Connection cn = DriverManager.getConnection("jdbc:odbc:type1");
-            Statement stm = cn.createStatement();
-            ResultSet rs = stm.executeQuery(sql);
-            
-            while(rs.next()){
-                System.out.printf("%-10s%s\n", rs.getString("ClassName"), rs.getString("Location"));
+            try (Connection cn = DriverManager.getConnection("jdbc:odbc:type1", "sa", "fat123456@")) {
+                System.out.println("Connect to ODBC complete");
             }
-            //Close Connection
-            cn.close();
         } catch (SQLException | ClassNotFoundException ex) {
             Logger.getLogger(JDBC_ODBC_Bridge.class.getName()).log(Level.SEVERE, null, ex);
         }

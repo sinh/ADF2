@@ -85,14 +85,11 @@ GO
 CREATE PROCEDURE spInsertClasses
 	@ClassName varchar(15),
 	@Location nvarchar(100)
-	--@IsInsert int OUTPUT
 AS BEGIN
 	IF EXISTS(SELECT ClassName FROM Classes WHERE ClassName=@ClassName)
-		--SET @IsInsert=0
 		RETURN 1
 	ELSE BEGIN
 		INSERT INTO Classes(ClassName, Location) VALUES(@ClassName, @Location)
-		--SET @IsInsert=1
 		RETURN 0
 	END
 END
