@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package session09.jdbc.callable_statement;
+package session10.jdbc.callable_statement;
 
 import java.sql.CallableStatement;
 import java.sql.SQLException;
