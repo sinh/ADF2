@@ -19,7 +19,7 @@ public class RuntimeDemo {
     public static void main(String[] args) {
         try {
             /* Chạy trên Windows */
-            //Runtime.getRuntime().exec("cal");
+            //Runtime.getRuntime().exec("calc");
             
             /* Chạy trên MacOSX */
             Runtime.getRuntime().exec("open -a Calculator");
